@@ -1,0 +1,165 @@
+@use 'functions';
+@use 'variables';
+
+.nbs-row {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+
+    &--start {
+        justify-content: flex-start;
+    }
+
+    &--end {
+        justify-content: flex-end;
+    }
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--top {
+        align-items: start;
+    }
+
+    &--w20 {
+        width: 20%;
+    }
+
+    &--w40 {
+        width: 40%;
+    }
+
+    &--w60 {
+        width: 60%;
+    }
+
+    &--w80 {
+        width: 80%;
+    }
+}
+
+.nbs-cell {
+    &--grow {
+        flex: 1 1 auto;
+    }
+}
+
+.nbs-separator {
+    margin: functions.toRem(16px) 0;
+    width: 100%;
+    height: functions.toRem(1px);
+    background-color: variables.$black-08;
+}
+
+.nbs-gutters {
+    padding: 0 variables.$gutters;
+}
+
+.nbs-marginVertical {
+    margin: functions.toRem(16px) 0 !important;
+
+    &--small {
+        margin: functions.toRem(8px) 0 !important;
+    }
+
+    &--medium {
+        margin: functions.toRem(24px) 0 !important;
+    }
+
+     &--large {
+        margin: functions.toRem(32px) 0 !important;
+    }
+}
+
+.nbs-marginHorizontal {
+    margin: 0 functions.toRem(16px) !important;
+
+    &--small {
+        margin: 0 functions.toRem(8px) !important;
+    }
+
+    &--medium {
+        margin: 0 functions.toRem(24px) !important;
+    }
+
+    &--large {
+        margin: 0 functions.toRem(32px) !important;
+    }
+}
+
+.nbs-marginTop {
+    margin-top: functions.toRem(16px) !important;
+
+    &--small {
+        margin-top: functions.toRem(8px) !important;
+    }
+
+    &--medium {
+        margin-top: functions.toRem(24px) !important;
+    }
+
+    &--large {
+        margin-top: functions.toRem(32px) !important;
+    }
+}
+
+.nbs-marginBottom {
+    margin-bottom: functions.toRem(16px) !important;
+
+    &--small {
+        margin-bottom: functions.toRem(8px) !important;
+    }
+
+     &--medium {
+        margin-bottom: functions.toRem(24px) !important;
+    }
+
+    &--large {
+        margin-bottom: functions.toRem(32px) !important;
+    }
+}
+
+.nbs-marginLeft {
+    margin-left: functions.toRem(16px) !important;
+
+    &--small {
+        margin-left: functions.toRem(8px) !important;
+    }
+
+     &--medium {
+        margin-left: functions.toRem(24px) !important;
+    }
+
+    &--large {
+        margin-left: functions.toRem(32px) !important;
+    }
+}
+
+.nbs-marginRight {
+    margin-right: functions.toRem(16px) !important;
+
+    &--small {
+        margin-right: functions.toRem(8px) !important;
+    }
+
+     &--medium {
+        margin-right: functions.toRem(24px) !important;
+    }
+
+    &--large {
+        margin-right: functions.toRem(32px) !important;
+    }
+}
+
+.nbs-table {
+    display: table;
+
+    &-row {
+        display: table-row;
+    }
+
+    &-cell {
+        display: table-cell;
+    }
+}

@@ -1,0 +1,119 @@
+@use 'variables';
+@use 'functions';
+
+/* title */
+h1, .h1,
+h2, .h2 {
+    font-size: functions.toRem(24px);
+    font-weight: 600;
+}
+
+h2, .h2 {
+    margin: functions.toRem(16px) 0;
+}
+
+h3, .h3 {
+    margin: functions.toRem(16px) 0;
+    font-size: functions.toRem(20px);
+    font-weight: 300;
+    color: variables.$black-64;
+}
+
+h4, .h4 {
+    font-size: functions.toRem(16px);
+    font-weight: 600;
+}
+
+.txt-label {
+    margin: variables.$gutters 0 functions.toRem(8px) variables.$gutters;
+    font-size: functions.toRem(16px);
+    font-weight: 300;
+    color: variables.$black-88;
+}
+
+/* paragraph */
+.txt-intro {
+    font-size: functions.toRem(20px);
+    font-weight: 300;
+    color: variables.$black-64;
+}
+
+/* align */
+.txt-center {
+    text-align: center;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+
+/* font weight */
+.txt-bold {
+    font-weight: 700 !important;
+}
+.txt-semibold {
+    font-weight: 600 !important;
+}
+.txt-medium {
+    font-weight: 500 !important;
+}
+.txt-regular {
+    font-weight: 400 !important;
+}
+.txt-light {
+    font-weight: 300 !important;
+}
+
+/* transformation */
+.txt-upper {
+    text-transform: uppercase;
+}
+
+.txt-lower {
+    text-transform: lowercase;
+}
+
+.txt-underline {
+    text-decoration: underline;
+}
+
+.txt-strike {
+    text-decoration: line-through;
+}
+
+/* color */
+.txt-mainColor {
+    color: variables.$black-88 !important;
+}
+.txt-mediumColor {
+    color: variables.$black-64 !important;
+}
+.txt-lightColor {
+    color: variables.$black-48 !important;
+}
+.txt-veryLightColor {
+    color: variables.$black-32 !important;
+}
+.txt-success {
+    color: variables.$green !important;
+}
+.txt-warning {
+    color: variables.$orange !important;
+}
+.txt-error {
+    color: variables.$red !important;
+}
+.txt-info {
+    color: variables.$blue !important;
+}
+.txt-updated {
+    color: variables.$purple !important;
+}
+.txt-white {
+    color: variables.$white !important;
+}

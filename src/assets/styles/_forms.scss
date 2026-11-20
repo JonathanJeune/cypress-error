@@ -1,0 +1,206 @@
+@use "sass:math";
+@use 'variables';
+@use 'functions';
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+fieldset {
+    margin: functions.toRem(24px) 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 variables.$gutters;
+  font-size: functions.toRem(20px);
+  font-weight: 300;
+  color: variables.$black-64;
+}
+
+input, select, textarea {
+  font-weight: 500;
+}
+
+.nbs-form {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &-title {
+      font-weight: 300;
+  }
+
+  &-zipcode,
+  &-lineSelect {
+      max-width: functions.toRem(160px);
+  }
+
+  &-indicSelect {
+      max-width: functions.toRem(120px);
+  }
+
+  &-panel {
+      background-color: variables.$black-02;
+  }
+
+  &-breadcrumb {
+    &Item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: variables.$gutters variables.$gutters variables.$gutters functions.toRem(48px);
+      border-radius: functions.toRem(12px);
+      background-color: variables.$black-02;
+
+      &--checked {
+        background-color: rgba(98, 185, 70, 0.04);
+      }
+
+      &::before {
+        left: variables.$gutters
+      }
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+  background-color: variables.$white !important;
+}
+
+/********** Range Input Styles **********/
+$inputBg: variables.$black-08;
+$trackBg: variables.$black-88;
+$trackBgHover: $trackBg;
+$sliderBG: variables.$white;
+$sliderWidth: functions.toRem(32px);
+$sliderHeight: functions.toRem(32px);
+$sliderCenter: functions.toRem(-16px);
+
+input[type="range"] {
+    appearance: none;
+    width: functions.toRem(200px);
+    height: functions.toRem(4px);
+    background: $inputBg;
+    border-radius: functions.toRem(3px);
+    background-image: linear-gradient($trackBg, $trackBg);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+ 
+ /* slider track */
+ input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+    border-radius: functions.toRem(3px);
+    height: functions.toRem(4px);  
+ }
+ 
+ /* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    margin-top: $sliderCenter;
+    height: $sliderHeight;
+    width: $sliderWidth;
+    border-radius: 50%;
+    background: $sliderBG;
+    cursor: ew-resize;
+    box-shadow: 0px functions.toRem(2px) functions.toRem(8px) variables.$black-24;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    height: $sliderHeight;
+    width: $sliderWidth;
+    border-radius: 50%;
+    border: 0;
+    background: $sliderBG;
+    cursor: ew-resize;
+    box-shadow: 0px functions.toRem(2px) functions.toRem(8px) variables.$black-24;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    appearance: none;
+    height: $sliderHeight;
+    width: $sliderHeight;
+    border-radius: 50%;
+    background: $sliderBG;
+    cursor: ew-resize;
+    box-shadow: 0px functions.toRem(2px) functions.toRem(8px) variables.$black-24;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background: $sliderBG;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    background: $sliderBG;
+  }
+  
+  input[type="range"]::-ms-thumb:hover {
+    background: $sliderBG;
+  }
+
+ /* Input Track */
+input[type=range]::-webkit-slider-runnable-track  {
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  input[type=range]::-moz-range-track {
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  input[type="range"]::-ms-track {
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+ /********** Placeholder **********/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-weight: 300;
+  font-family: variables.$main-font;
+  color: variables.$color-placeholder;
+  opacity: 1; /* Firefox */
+}
+::-webkit-input-placeholder {
+  font-weight: 300;
+  font-family: variables.$main-font;
+  color: variables.$color-placeholder;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-weight: 300;
+  font-family: variables.$main-font;
+  color: variables.$color-placeholder;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-weight: 300;
+  font-family: variables.$main-font;
+  color: variables.$color-placeholder;
+}

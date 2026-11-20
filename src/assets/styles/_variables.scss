@@ -1,0 +1,53 @@
+@use 'functions';
+
+/* structure */
+$gutters: functions.toRem(16px);
+$negativeGutters: -($gutters);
+
+/* text */
+$main-font: 'barlow_semi_condensed' !default;
+
+/* colors */
+$black: #000 !default;
+$black-88: rgba($black, 0.88) !default;
+$black-64: rgba($black, 0.64) !default;
+$black-48: rgba($black, 0.48) !default;
+$black-32: rgba($black, 0.32) !default;
+$black-24: rgba($black, 0.24) !default;
+$black-16: rgba($black, 0.16) !default;
+$black-14: rgba($black, 0.14) !default;
+$black-08: rgba($black, 0.08) !default;
+$black-04: rgba($black, 0.04) !default;
+$black-02: rgba($black, 0.02) !default;
+$black-88: rgba($black, 0.88) !default;
+$black-64: rgba($black, 0.64) !default;
+$black-48: rgba($black, 0.48) !default;
+$black-32: rgba($black, 0.32) !default;
+$black-24: rgba($black, 0.24) !default;
+$black-16: rgba($black, 0.16) !default;
+$black-14: rgba($black, 0.14) !default;
+$black-08: rgba($black, 0.08) !default;
+$black-04: rgba($black, 0.04) !default;
+$black-02: rgba($black, 0.02) !default;
+$grey-light: #EBEBEB !default;
+$grey: #cecece !default;
+$white: #fff !default;
+$white-lux: #fafafa !default;
+$blue: #007BFF !default;
+$blue-light: rgba($blue, 0.08) !default;
+$blue-pure: #1D00FF !default;
+$red: #E0383E !default;
+$red-light: rgba($red, 0.08) !default;
+$orange: #F7831B !default;
+$orange-light: rgba($orange, 0.04) !default;
+$green: #62B946 !default;
+$green-light: rgba($green, 0.08) !default;
+$purple: #953E96 !default;
+$purple-light: rgba($purple, 0.08) !default;
+$pink: #FA7DB7 !default;
+$pink-light: rgba($pink, 0.08) !default;
+$gold-fusion: #85754E !default;
+$color-placeholder: $black-32 !default;
+
+$transition-border: border 0.4s ease-out !default;
+$transition-rotate: transform 0.4s ease-out !default;

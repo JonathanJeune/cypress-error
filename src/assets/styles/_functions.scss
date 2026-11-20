@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+/* convert px to rem */
+$html-font-size: 16px;
+
+@function stripUnit($value) {
+    @return math.div($value, ($value * 0 + 1));
+}
+@function toRem($px) {
+    @return #{math.div(stripUnit($px), stripUnit($html-font-size))}rem;
+}
